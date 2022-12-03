@@ -2,7 +2,7 @@ import style from './workingComponents.module.css'
 
 // working Component
 import Footer from '../../components/footer/footer'
-import logo from '../../components/footer/logo.svg'
+import logo from '../../assets/example-logo.svg'
 
 
 export default function module(){
