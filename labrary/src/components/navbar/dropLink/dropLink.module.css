@@ -1,0 +1,54 @@
+.body{
+    display: flex;
+}
+
+.arrow{
+    transition: 0.5s;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+
+    position: absolute;
+    z-index: -1;
+
+    top: -20%;
+
+    transition: 0.5s;
+}
+
+/* Animation */
+.arrowAniIn{
+    transform: rotate(180deg);
+}
+
+.arrowAniOut{
+    transform: rotate(0deg);
+}
+
+.linksAniIn{
+    top: 10%;
+}
+
+.linksAniOut{
+    top: -20%;
+}
+
+@media only screen and (max-width: 800px) {
+    .body{
+        position: relative;
+    }
+
+    .content{
+        top: 0;
+        left: 100%;
+        filter: opacity(0);
+    }
+
+    .linksAniIn{
+        top: 0;
+        filter: opacity(100%);
+    }
+}
