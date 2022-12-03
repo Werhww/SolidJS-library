@@ -1,0 +1,30 @@
+.footer {
+    display: flex;
+    gap: 4rem;
+
+    margin-top: 10rem;
+    padding: 1rem;
+    padding-top: 3rem;
+
+    border-top: 1px solid black;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+    gap: 15rem;
+}
+
+.content * {
+    color: black;
+    text-decoration: none;
+}
+
+.content div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
