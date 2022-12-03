@@ -1,0 +1,127 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem;
+    padding-top: 0.5rem;
+    padding-right: 2rem;
+    padding-bottom: 0rem;
+
+    border-bottom: 1px  solid black;
+}
+
+.navbar *:hover {
+    cursor: pointer;
+}
+
+.links {
+    display: flex;
+    gap: 2rem;
+
+    font-size: 1.5rem;
+}
+
+.logo {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.hamburger {
+    display: none;
+    z-index: 100;
+}
+
+.background {
+    display: none;
+
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+    top: 50%;
+    left: -50%;
+
+    width: 100vw;
+    height: 120vh;
+    
+    background-color: black;
+    filter: opacity(40%) blur(16px);
+}
+
+/* Animation */
+.backgroundAniIn {
+    animation-name: backgroundIn;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.backgroundAniOut {
+    animation-name: backgroundOut;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.itemsAniIn {
+    animation-name: itemsAniIn;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.itemsAniOut {
+    animation-name: itemsAniOut;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes itemsAniIn {
+    to {
+        left: 20%;
+    }
+}
+
+@keyframes itemsAniOut {
+    from {
+        left: 20%;
+    }to {
+        left: -20%;
+    }
+}
+
+@keyframes backgroundIn {
+    from {
+        left: -50%;
+    }to {
+        left: 0%;
+    }
+}
+
+@keyframes backgroundOut {
+    from {
+        left: 0%;
+    }to {
+        left: -50%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .navbar{
+        flex-direction: row-reverse ;
+    }
+
+    .hamburger{
+        display: flex;
+    }
+
+    .background{
+        display: flex;
+    }
+
+    .links{
+        position: absolute;
+        flex-direction: column;
+
+        top: 25%;
+        left: -50%;
+        transform: translate(-50%, -50%);
+    }
+}
