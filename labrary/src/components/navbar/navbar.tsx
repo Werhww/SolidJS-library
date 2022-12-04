@@ -2,15 +2,15 @@ import { router } from '@klevn/solid-router';
 import { createSignal } from 'solid-js';
 
 import style from './navbar.module.css'
-import logo from './logo.svg'
 import hamburger from './hamburger.svg'
 
 interface props {
     children:any,
-    iconLink:string
+    logoLink:string
+    logo:any
 }
 
-export default function module({children, iconLink}:props) {
+export default function module({children, logoLink, logo}:props) {
     const [hamburgerOpen, setHamburgerOpen] = createSignal(false)
     const [linksAni, setlinksAni] = createSignal()
     const [backgroundAni, setBackgroundAni] = createSignal()
@@ -18,7 +18,7 @@ export default function module({children, iconLink}:props) {
     return (
     <div class={style.navbar}>
         <div>
-            <img class={style.logo} onclick={()=>{router.update(iconLink)}} src={logo} alt="logo"/>
+            <img class={style.logo} onclick={()=>{router.update(logoLink)}} src={logo} alt="logo"/>
         </div>
         <img class={style.hamburger} src={hamburger} onClick={()=>{
             hamburgerOpen()?setlinksAni(style.itemsAniOut):setlinksAni(style.itemsAniIn)
