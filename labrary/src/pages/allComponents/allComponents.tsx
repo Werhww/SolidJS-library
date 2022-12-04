@@ -5,6 +5,9 @@ import Navbar from '../../components/navbar/navbar'
 import NavLink from '../../components/navbar/navlink/navlink'
 import DropLink from '../../components/navbar/dropLink/dropLink'
 
+// Footer imports
+import Footer from '../../components/footer/footer'
+import logo from '../../assets/example-bigLogo.svg'
 
 export default function module(){
     return <div>
@@ -15,5 +18,7 @@ export default function module(){
             </DropLink>
             <NavLink link='/' active={true}>Home</NavLink>       
         </Navbar>
+
+        <Footer logo={logo} logoLink='url'  privacyLink='expamplelink' termsLink='expamplelink' mail='eksampl@gmail.com'></Footer>
     </div>
 }
