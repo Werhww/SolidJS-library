@@ -1,0 +1,28 @@
+.button {
+    display: flex;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+/* default button css */
+.buttonText {
+    color: white;
+    font-size: 2.1vh;
+
+    border-radius: 20rem;
+    background-color: #2411FF;
+
+    padding: 0.1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.buttonText:hover {
+    filter: drop-shadow(2px 2px 2px #2411FF);
+}
+
+
+
+/* icon button css */
