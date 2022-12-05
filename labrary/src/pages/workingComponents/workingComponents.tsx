@@ -2,6 +2,7 @@ import style from './workingComponents.module.css'
 
 import Button from '../../components/buttons/buttons'
 import { IconButton } from '../../components/buttons/buttons'
+import { TextButton } from '../../components/buttons/buttons'
 
 
 // working
@@ -14,6 +15,7 @@ export default function module(){
 
     return <div>
         <IconButton onclick={exsample} icon={icon}></IconButton>
-        <Button onclick={exsample}>test</Button>
+        <Button onclick={exsample}>Save</Button>
+        <Button onclick={exsample}>TextButton</Button>
     </div>
 }

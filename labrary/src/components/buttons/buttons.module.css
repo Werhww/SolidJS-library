@@ -9,7 +9,7 @@
 /* default button css */
 .buttonText {
     color: white;
-    font-size: 2.1vh;
+    font-size: 2.5vh;
 
     border-radius: 20rem;
     background-color: #2411FF;
@@ -20,7 +20,7 @@
 }
 
 .buttonText:hover {
-    filter: drop-shadow(2px 2px 2px #2411FF);
+    filter: drop-shadow(1px 1px 1px #2411FF);
 }
 
 
