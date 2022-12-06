@@ -11,7 +11,7 @@
 }
 
 /* default button css */
-.defaultButton{
+.defaultButton {
     color: white;
     font-size: 1.5rem;
 
@@ -29,24 +29,24 @@
 
 /* icon buttons css */
 
-.iconShadow:hover{
+.iconShadow:hover {
     filter: drop-shadow(2px 2px 2px #000);
 }
 
-.smallIcon{
+.smallIcon {
     height: 1.5rem;
 }
 
-.mediumIcon{
+.mediumIcon {
     height: 3rem;
 }
 
-.bigIcon{
+.bigIcon {
     height: 5rem;
 }
 
 /* Login Button */
-.loginButton{
+.loginButton {
     display: flex;
     gap: 1rem;
 
@@ -58,6 +58,6 @@
     border-radius: 5rem;
 }
 
-.loginIcon{
+.loginIcon {
     height: 1.5rem;
 }
