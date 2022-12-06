@@ -1,5 +1,9 @@
-.button {
+.default {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    height: fit-content;
 }
 
 .button:hover {
@@ -7,22 +11,53 @@
 }
 
 /* default button css */
-.buttonText {
+.defaultButton{
     color: white;
-    font-size: 2.1vh;
+    font-size: 1.5rem;
 
-    border-radius: 20rem;
+    border-radius: 5rem;
     background-color: #2411FF;
 
-    padding: 0.1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    width: 6rem;
+    padding: 0.3rem;
 }
 
-.buttonText:hover {
+.defaultButton:hover {
     filter: drop-shadow(2px 2px 2px #2411FF);
 }
 
 
+/* icon buttons css */
 
-/* icon button css */
+.iconShadow:hover{
+    filter: drop-shadow(2px 2px 2px #000);
+}
+
+.smallIcon{
+    height: 1.5rem;
+}
+
+.mediumIcon{
+    height: 3rem;
+}
+
+.bigIcon{
+    height: 5rem;
+}
+
+/* Login Button */
+.loginButton{
+    display: flex;
+    gap: 1rem;
+
+    padding: 0.5rem;
+    width: 15rem;
+
+
+    border: 1px solid #e0e0de;
+    border-radius: 5rem;
+}
+
+.loginIcon{
+    height: 1.5rem;
+}
