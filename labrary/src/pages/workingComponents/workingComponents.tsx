@@ -1,11 +1,8 @@
 import style from './workingComponents.module.css'
 
 import Button from '../../components/buttons/buttons'
-import { LoginButton } from '../../components/buttons/buttons'
-
-import { SmallIconButton } from '../../components/buttons/buttons'
-import { MediumIconButton } from '../../components/buttons/buttons'
-import { BigIconButton } from '../../components/buttons/buttons'
+import { TextIconButton } from '../../components/buttons/buttons'
+import { IconButton } from '../../components/buttons/buttons'
 import { CustomIconButton } from '../../components/buttons/buttons'
 
 // working
@@ -18,11 +15,9 @@ export default function module(){
     }
 
     return <div class={style.body}>
-        <SmallIconButton onclick={example} icon={googleIcon}></SmallIconButton>
-        <MediumIconButton onclick={example} icon={googleIcon}></MediumIconButton>
-        <BigIconButton onclick={example} icon={googleIcon}></BigIconButton>
-        <CustomIconButton onclick={example} icon={googleIcon} height={'10rem'}> </CustomIconButton>
+        <CustomIconButton onclick={example} icon={googleIcon}> </CustomIconButton>
         <Button onclick={example}>test</Button>
-        <LoginButton onclick={example} icon={googleIcon} justify_content="center">Sign in with Google</LoginButton>
+        <TextIconButton onclick={example} icon={googleIcon}>Sign in with Google</TextIconButton>
+        <IconButton onclick={example} arrow="1"></IconButton>
     </div>
 }
