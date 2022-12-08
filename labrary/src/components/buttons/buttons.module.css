@@ -1,68 +1,64 @@
 :root{
-    --button_color: #2411FF;
-    --border_color: #2411FF;
-    --text_color: white;
-    --height: fit-content;
-    --width: 10rem;
-    --icon_height: 3rem;
+    --button_background_color: var(--blue);
+    --button_border_color: var(--blue);
+    --button_border_radius: 5rem; 
+    --button_drop_shadow_color: var(--blue);
+    --button_text_color: white;
+    --button_font_size: 1.25rem;
+    --button_height: fit-content;
+    --button_width: fit-content;
+    --button_align_items: center;
+    --button_justify_content: center;
 }
 
 .default {
     display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 1rem;
-    
-    height: var(--height);
-
-    color: var(--button_color);
-
-    font-size: 1.5rem;
-    border-radius: 5rem;
-    background-color: var(--button_color);
-
-    width: var(--width);
     padding: 0.3rem;
+
+    background-color: var(--button_background_color);
+    border: 1px solid var(--button_border_color);
+    border-radius: var(--button_border_radius);
+
+    color: var(--button_text_color);
+    font-size: var(--button_font_size);
+
+    height: var(--button_height);
+    width: var(--button_width);
+
+    align-items: var(--button_align_items);
+    justify-content: var(--button_justify_content);
 }
 
 .default:hover {
     cursor: pointer;
-    filter: drop-shadow(2px 2px 2px var(--button_color));
-}
-
-.icon{
-    height: var(--icon_height);
+    filter: drop-shadow(2px 2px 2px var(--button_drop_shadow_color));
 }
 
 
-.defaultButton {
-    color: var(--button_color);
-    font-size: 1.5rem;
-
-    border-radius: 5rem;
-    background-color: var(--button_color);
-    border: 1px solid var(--border_color);
-
-    width: 6rem;
-    padding: 0.3rem;
+/* Icon button */
+.iconButton{
+    height: 4rem;
 }
 
-.defaultButton:hover {
-    filter: drop-shadow(2px 2px 2px var(--button_color));
+.iconButton:hover {
+    cursor: pointer;
 }
 
 
-/* Login Button */
+/* Text Icon Button */
 .textIconButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     gap: 1rem;
+    padding: 0.3rem;
 
-    padding: 0.5rem;
+    color: black;
     width: 15rem;
-
     border-radius: 5rem;
 }
 
-.loginIcon {
+.textIcon {
     height: 1.5rem;
 }
