@@ -11,7 +11,7 @@ interface props {
     align_items?:string,
     justify_content?:string,
     height?:string,
-    width?:string,
+    side_padding?:string,
 
     customClass?:string
 
@@ -31,12 +31,12 @@ interface defaults{
     text_color?:string,
     font_size?:string,
     height?:string,
-    width?:string,
+    side_padding?:string,
     align_items?:string,
     justify_content?:string,
 }
 
-export function DefaultButtonStyles({background_Color, border_color, border_radius, drop_shadow_color, text_color, font_size, height, width, align_items, justify_content}:defaults){
+export function DefaultButtonStyles({background_Color, border_color, border_radius, drop_shadow_color, text_color, font_size, height, side_padding, align_items, justify_content}:defaults){
     const properties = {
         "--button_background_color": background_Color,
         '--button_border_color': border_color,
@@ -45,7 +45,7 @@ export function DefaultButtonStyles({background_Color, border_color, border_radi
         '--button_text_color': text_color,
         '--button_font_size': font_size,
         '--button_height': height,
-        '--button_width': width,
+        '--button_side_padding': side_padding,
         '--button_align_items': align_items,
         '--button_justify_content': justify_content
     }
@@ -63,13 +63,13 @@ export default function Button({onclick, children, customClass}:props) {
     </p>)
 }
 
-
-export function IconButton({onclick, icon, rotate, filter, height, width}:props){
+export function IconButton({onclick, icon, rotate, filter, height, side_padding}:props){
     return <div class={styles.iconButton} onclick={onclick}>
         <img src={icon} 
             style={{
                 "height": height,
-                "width": width,
+                "padding-left": side_padding,
+                "padding-right": side_padding,
                 "rotate": rotate,
                 "filter": filter
             }}
@@ -77,7 +77,7 @@ export function IconButton({onclick, icon, rotate, filter, height, width}:props)
     </div>
 }
 
-export function TextIconButton({children, icon, onclick, filter, background_Color, border_color, border_radius, text_color, justify_content, width, height}:props){
+export function TextIconButton({children, icon, onclick, filter, background_Color, border_color, border_radius, text_color, justify_content, side_padding, height}:props){
     return <div class={styles.textIconButton} onClick={onclick}
     style={{ 
         "background-color":background_Color,
@@ -85,7 +85,8 @@ export function TextIconButton({children, icon, onclick, filter, background_Colo
         "border-radius": border_radius,
         "color": text_color,
         "justify-content": justify_content, 
-        "width": width,
+        "padding-left": side_padding,
+        "padding-right": side_padding
         }}>
         <img class={styles.loginIcon} src={icon} 
             style={{

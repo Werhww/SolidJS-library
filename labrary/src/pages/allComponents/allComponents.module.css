@@ -1,0 +1,15 @@
+.buttonExample {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 4rem;
+
+    margin: 5rem;
+}
+
+.buttonExample div{
+    display: flex;
+    gap: 3rem;
+}

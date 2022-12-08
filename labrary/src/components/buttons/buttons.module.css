@@ -1,12 +1,12 @@
 :root{
-    --button_background_color: var(--blue);
-    --button_border_color: var(--blue);
+    --button_background_color: #2411FF;
+    --button_border_color: #2411FF;
     --button_border_radius: 5rem; 
-    --button_drop_shadow_color: var(--blue);
+    --button_drop_shadow_color: #2411FF;
     --button_text_color: white;
     --button_font_size: 1.25rem;
     --button_height: fit-content;
-    --button_width: fit-content;
+    --button_side_padding: 3rem;
     --button_align_items: center;
     --button_justify_content: center;
 }
@@ -14,6 +14,7 @@
 .default {
     display: flex;
     padding: 0.3rem;
+    transition: 0.1s;
 
     background-color: var(--button_background_color);
     border: 1px solid var(--button_border_color);
@@ -23,7 +24,8 @@
     font-size: var(--button_font_size);
 
     height: var(--button_height);
-    width: var(--button_width);
+    padding-left: var(--button_side_padding);
+    padding-right: var(--button_side_padding);
 
     align-items: var(--button_align_items);
     justify-content: var(--button_justify_content);
@@ -52,11 +54,18 @@
     align-items: center;
 
     gap: 1rem;
-    padding: 0.3rem;
+    padding: 0.6rem;
+
+    height: fit-content;
 
     color: black;
-    width: 15rem;
+
     border-radius: 5rem;
+    border: 1px solid #CCCCCC;
+}
+
+.textIconButton:hover {
+    cursor: pointer;
 }
 
 .textIcon {
