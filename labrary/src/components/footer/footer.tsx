@@ -41,7 +41,7 @@ export default function footer({logoLink, privacyLink, termsLink, logo, mail}:pr
           </div>
           <div class={style.contact}>
             <p>Contact</p>
-            <a href={mail}>{mail}</a>
+            <a href={`mailto:${mail}`}>{mail}</a>
           </div>
         </div>
     </div>
