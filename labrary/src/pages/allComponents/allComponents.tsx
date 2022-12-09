@@ -17,13 +17,23 @@ import { DefaultButtonStyles } from '../../components/buttons/buttons'
 import { TextIconButton } from '../../components/buttons/buttons'
 import { IconButton } from '../../components/buttons/buttons'
 
-// working
+// Input import
+import Input from '../../components/inputs/inputs'
+
+
+// example icons
 import logo from '../../assets/example-logo.svg'
 import googleIcon from '../../assets/example-loginIcon.svg'
 
 export default function module(){
     function example() {
         alert("test")
+    }
+
+    let input:any
+
+    function getInput(ref:any) {
+        input = ref
     }
 
     return <div>
@@ -57,6 +67,16 @@ export default function module(){
             </div>
             
         </div>
+
+
+        <div class={style.inputExample}>
+            <p>Input witch can be used as many things </p>
+            <div class={style.inputs}>
+                <Input type="text" width='10rem' font_size='1.25rem' valueCb={getInput}>Text</Input>
+                <Input type="date" width='10rem' font_size='1.25rem' valueCb={getInput}> </Input>
+                <Input type="number" width='10rem' font_size='1.25rem' valueCb={getInput}>Number</Input>
+            </div>
+       </div>
         
         <Footer logo={footerlogo} logoLink='url'  privacyLink='expamplelink' termsLink='expamplelink' mail='eksampl@gmail.com'></Footer>
     </div>
