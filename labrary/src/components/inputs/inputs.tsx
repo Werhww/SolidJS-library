@@ -20,7 +20,9 @@ export default function input({children, type, width, font_size, valueCb}:props)
                 "width": width,
                 "font-size": font_size
             }}></input>
-        <div class={style.underline}></div>
+        <div class={style.underline} style={{
+                "width": width,
+            }}></div>
     </div>)
 
     valueCb(element)
