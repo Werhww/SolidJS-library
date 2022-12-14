@@ -12,8 +12,12 @@ import { DefaultButtonStyles } from './buttons/buttons'
 import { TextIconButton } from './buttons/buttons'
 import { IconButton } from './buttons/buttons'
 
-// Input import
+// Input imports
 import Input from './inputs/inputs'
+
+// Select imports
+import Select from './select/select'
+import  SelectOption  from './select/selectItem/selectItem'
 
 const exports = {
     Navbar,
@@ -24,7 +28,9 @@ const exports = {
     DefaultButtonStyles,
     TextIconButton,
     IconButton,
-    Input
+    Input,
+    Select,
+    SelectOption
 }
 
 export default exports

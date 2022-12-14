@@ -1,27 +1,22 @@
 import style from './workingComponents.module.css'
 
-import Input from '../../components/inputs/inputs'
+import Select from '../../components/select/select'
+import SelectItem from '../../components/select/selectItem/selectItem'
 
 
 export default function module(){
-    function example() {
-        console.log('test')
+    let selectObject:any
+
+    function change() {
+        console.log('hello')
+        console.log(selectObject.value)
     }
-
-    let input:any
-
-    function getInput(ref:any) {
-        input = ref
-    }
-
-
-    function printInput() {
-        console.log(input.value)
-    }
-
 
     return <div class={style.body}>
-        <Input type="text" width='10rem' font_size='1.25rem' valueCb={getInput}>Name</Input>
-        <p onClick={()=>(printInput())}>click</p>
+        <Select ref={selectObject} onChange={change}>
+            <SelectItem value='15'>fish</SelectItem>
+            <SelectItem value='1135'>fses</SelectItem>
+            <SelectItem value='1415'>fi441sh</SelectItem>
+        </Select>
     </div>
 }
