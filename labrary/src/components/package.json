@@ -1,9 +1,13 @@
 {
   "name": "@kleppe/solidjs-library",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Best basic SolidJS library",
   "main": "index.tsx",
   "keywords": [],
   "author": "Leo Walbeck Kleppe",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@klevn/solid-router": "2.0.2",
+    "solid-js": "1.6.2"
+  }
 }
