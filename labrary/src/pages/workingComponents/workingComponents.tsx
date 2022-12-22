@@ -1,7 +1,11 @@
 import style from './workingComponents.module.css'
 
-import Select from '../../components/select/select'
-import SelectItem from '../../components/select/selectItem/selectItem'
+import Navbar from '../../components/navbar/navbar'
+import Navlink from '../../components/navbar/navlink/navlink'
+import DropLink from '../../components/navbar/dropLink/dropLink'
+
+import logo from "../../assets/example-logo.svg"
+
 
 
 export default function module(){
@@ -13,10 +17,9 @@ export default function module(){
     }
 
     return <div class={style.body}>
-        <Select ref={selectObject} onChange={change}>
-            <SelectItem value='15'>fish</SelectItem>
-            <SelectItem value='1135'>fses</SelectItem>
-            <SelectItem value='1415'>fi441sh</SelectItem>
-        </Select>
+        <Navbar logo={logo} logoLink="/all">
+            <Navlink active={false} link='/test'>Home</Navlink>
+            <Navlink active={true} link='/'>Back</Navlink>
+        </Navbar>
     </div>
 }
