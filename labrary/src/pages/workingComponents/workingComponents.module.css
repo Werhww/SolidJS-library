@@ -1,0 +1,10 @@
+.body {
+    display: flex;
+
+    padding: 5rem;
+}
+
+.inputs{
+    padding: 1rem;
+    background-color: black;
+}
